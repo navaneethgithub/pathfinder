@@ -109,7 +109,7 @@
 		<div id="fh5co-contact" class="fh5co-section-gray">
 			<div class="container">
 				 
-				<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbwnpVqNnmOnsb7KzxK0BaDI5FdSwPx12kSvqvFET2ZmeXonNDtToUYkfTfmgEkydDgS8A/exe"  >
+				<form id="submit-form" action="" >
 					<div class="row animate-box">
 						<div class="col-md-6">
 							<h3 class="section-title">Our Address</h3>
@@ -134,14 +134,21 @@
 										<input type="text" name="email" class="form-control" placeholder="Email">
 									</div>
 								</div>
+
+								<label for="country">Country</label>
+								<select id="country" name="color">
+								  <option value="australia">Australia</option>
+								  <option value="canada">Canada</option>
+								  <option value="usa">USA</option>
+								</select>
 								<div class="col-md-12">
 									<div class="form-group">
-										<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
+										<textarea name="message" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<input type="submit" value="Send Message" class="btn btn-primary">
+										<input type="submit" value="Submit" class="btn btn-primary">
 									</div>
 								</div>
 							</div>
@@ -271,7 +278,7 @@
         $("#submit-form").submit((e)=>{
             e.preventDefault()
             $.ajax({
-                url:"",
+                url:"https://script.google.com/macros/s/AKfycbwnpVqNnmOnsb7KzxK0BaDI5FdSwPx12kSvqvFET2ZmeXonNDtToUYkfTfmgEkydDgS8A/exe",
                 data:$("#submit-form").serialize(),
                 method:"post",
                 success:function (response){
